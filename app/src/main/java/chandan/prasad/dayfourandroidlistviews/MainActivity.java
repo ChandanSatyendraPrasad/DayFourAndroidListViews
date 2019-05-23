@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
          CustomAdapter customAdapter = new CustomAdapter(MainActivity.this,items);
 
-        ListView listView = findViewById(R.id.list_view);
+        ListView listView = findViewById(R.id.list_views);
 
         listView.setDivider(null);
         listView.setAdapter(customAdapter);

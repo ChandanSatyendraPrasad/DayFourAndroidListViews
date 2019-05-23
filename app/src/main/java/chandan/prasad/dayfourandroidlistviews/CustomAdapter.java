@@ -18,9 +18,8 @@ import java.util.ArrayList;
 public class CustomAdapter extends ArrayAdapter<CustomClass> {
 
 
-
     public CustomAdapter(@NonNull Context context, ArrayList<CustomClass> resource) {
-        super(context,0, resource);
+        super(context, 0, resource);
     }
 
 
@@ -29,7 +28,7 @@ public class CustomAdapter extends ArrayAdapter<CustomClass> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
 
-        convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_list_item,parent,false);
+        convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_list_item, parent, false);
 
 
         CustomClass item = getItem(position);
@@ -47,9 +46,9 @@ public class CustomAdapter extends ArrayAdapter<CustomClass> {
         imageView.setImageResource(item.getImage_res());
 
 
-        Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.custom_listview_animation);
+        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.custom_listview_animation);
         convertView.startAnimation(animation);
 
-       return convertView;
+        return convertView;
     }
 }
